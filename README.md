@@ -8,7 +8,7 @@ Dataset will be available after publication.
 Please refer our previous work [SI3DP](https://github.com/juhou/SI3DP)
 
 
-![SI3DP](https://github.com/juhou/SI3DPpp/blob/main/figure_overall.png)
+![SI3DP](https://github.com/juhou/SI3DPpp/blob/main/figure_overall.PNG)
 
 
 ### Abstract
