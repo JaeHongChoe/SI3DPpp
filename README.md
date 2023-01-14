@@ -1,9 +1,6 @@
 ### SI3DP++ project page
 
-SI3DP++: Source Identification of 3D Printer Based on Layered Texture Encoders, (submitted to IEEE Transactions on Multimedia)
-
-Bo Seok Shim, Jae Hong Choe, and Jong-Uk Hou∗ 
-
+B. S. Shim, J. H. Choe and J. -U. Hou, "Source Identification of 3D Printer Based on Layered Texture Encoders," in IEEE Transactions on Multimedia, doi: 10.1109/TMM.2022.3233764.
 
 
 Dataset will be available after publication.
