@@ -53,7 +53,8 @@ class MMC_net(nn.Module):
             in_ch_ef = self.transformer.head.in_features + self.enet.classifier.in_features
             in_ch_cn = self.enet.classifier.in_features
             self.enet.classifier = nn.Identity()
-            self.transformer.head = nn.Identity()
+            self.transformer.head.fc = nn.Identity()
+            self.transformer.head.flatten = nn.Identity()
 
             self.fc_outdim1 = nn.Linear(in_ch_ef + in_ch_meta, Setup_3d.out_dim)
             self.fc_outdim1_modal = nn.Linear((in_ch_ef + in_ch_meta + in_ch_cn), Setup_3d.out_dim)
@@ -88,7 +89,7 @@ class MMC_net(nn.Module):
                 img_f = self.enet(x[0])
                 img_fft = torch.abs(fft.fft2(x[1], dim=(2, 3), norm='ortho'))
                 fft_f = self.transformer(img_fft)
-                x1 = torch.cat((fft_f, img_f), dim=1)
+                x1 = torch.cat((fft_f.flatten(1), img_f), dim=1)
                 x2 = self.enet(x[2]).squeeze(-1).squeeze(-1)  # full
                 x = torch.cat((x1, x2), dim=1)
 

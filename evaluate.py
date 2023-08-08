@@ -110,6 +110,16 @@ def parse_args():
 
     parser.add_argument('--n-epochs', type=int, default=0)
 
+    parser.add_argument('--use-meta', action='store_true')
+    
+    parser.add_argument('--baseline', action='store_true')
+
+    parser.add_argument('--semi', action='store_true')
+
+    parser.add_argument('--sanding-processing', action='store_true')
+
+    parser.add_argument('--coating-processing', action='store_true')
+    
     args, _ = parser.parse_known_args()
     return args
 

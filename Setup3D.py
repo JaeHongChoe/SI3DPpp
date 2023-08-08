@@ -34,7 +34,7 @@ class Config_3D():
 
         self.k_fold = 4
         self.data_dir = './data/'
-        self.data_folder = 'SI3DP/'
+        self.data_folder = 'SI3DPpp/'
         self.CUDA_VISIBLE_DEVICES = '0'
         self.image_size = 224
         self.log_dir = './logs'
